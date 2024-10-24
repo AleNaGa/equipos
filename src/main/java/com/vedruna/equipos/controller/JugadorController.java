@@ -44,6 +44,7 @@ public class JugadorController {
         try{
             return jugadorService.findByName(name);
         }catch(Exception e){
+            System.out.println(e.getMessage());
             return null;
         }
     }

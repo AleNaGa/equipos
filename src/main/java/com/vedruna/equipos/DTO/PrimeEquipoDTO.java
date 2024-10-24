@@ -1,6 +1,9 @@
 package com.vedruna.equipos.DTO;
 
+import java.util.List;
+
 import com.vedruna.equipos.Persistance.model.Equipo;
+import com.vedruna.equipos.Persistance.model.Jugador;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +14,7 @@ public class PrimeEquipoDTO {
     
     private int id;
     private String nombre;
-    private JugadorDTO jugador;
+    private List<JugadorDTO> jugador;
 
     public PrimeEquipoDTO(Equipo equipo) {
         this.id = equipo.getIdEquipo();

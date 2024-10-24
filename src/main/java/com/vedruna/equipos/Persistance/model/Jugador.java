@@ -32,7 +32,7 @@ public class Jugador implements Serializable {
     private int edad;
 
     @ManyToOne
-    @JoinColumn(name = "equipo_idequipo", nullable=true)//Para cuando registremos un jugador sin equipo, no sé si es default que sea true nullable pero lo pongo para acordarme
+    @JoinColumn(name = "equipos_idequipo", nullable=true)//Para cuando registremos un jugador sin equipo, no sé si es default que sea true nullable pero lo pongo para acordarme
     private Equipo equipo;
 
 }

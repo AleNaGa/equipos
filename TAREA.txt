@@ -2,7 +2,7 @@
 
         2. Consultar un solo equipo (Deben verse sus jugadores) PrimeEquipoDTO find by Name/ID
 
-        3. Consultar todos los jugadores (Debe verse solo el nombre del equipo, pero no el objeto equipo entero) JugadorDTO Find All / find by name
+                3. Consultar todos los jugadores (Debe verse solo el nombre del equipo, pero no el objeto equipo entero) JugadorDTO Find All / find by name
 
 
 
@@ -22,3 +22,7 @@
         7. Borrar equipo (No deben borrarse sus jugadores)
 
         8. Borrar jugador (No debe borrarse su equipo)
+
+
+
+LA TAREA ES QUE SI NO HAY JUGADORES EN UN EQUIPO NO SE HAGA LO DE AÑADIR JUGADORES A LA LISTA DE PRIMEEQUIPODTO

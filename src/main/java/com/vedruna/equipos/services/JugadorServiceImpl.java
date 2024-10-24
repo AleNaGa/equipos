@@ -35,6 +35,7 @@ public class JugadorServiceImpl implements JugadorServiceI {
        try{
            return new PrimeJugadorDTO(jugadorRepo.findByNombre(name));
        }catch(Exception e){
+           System.out.println(e.getMessage());
            return null;
        }
     }
@@ -54,7 +55,7 @@ public class JugadorServiceImpl implements JugadorServiceI {
     @Override
     public void delete(int idJugador) {
        try{
-           jugadorRepo.deleteByIdJugador(idJugador);
+           jugadorRepo.deleteByIdjugador(idJugador);
        }catch(Exception e){
            e.getMessage();
        }
@@ -63,7 +64,7 @@ public class JugadorServiceImpl implements JugadorServiceI {
     @Override
     public void inscribirEnEquipo(int idJugador, int idEquipo) {
         try{
-            Jugador jugador = jugadorRepo.findByIdJugador(idJugador);
+            Jugador jugador = jugadorRepo.findByIdjugador(idJugador);
             Equipo equipo = equipoRepo.findByIdEquipo(idEquipo);
             jugador.setEquipo(equipo);
             jugadorRepo.save(jugador);

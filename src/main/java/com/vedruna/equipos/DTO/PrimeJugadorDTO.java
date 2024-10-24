@@ -12,12 +12,17 @@ public class PrimeJugadorDTO {
     private int id;
     private String nombre;
     private int edad;
-    private String  nameEquipo;
+    private String equipo;
 
     public PrimeJugadorDTO(Jugador jugador){
         this.id = jugador.getIdjugador();
         this.nombre = jugador.getNombre();
         this.edad = jugador.getEdad();
-        this.nameEquipo = jugador.getEquipo().getNombre();
+        if(jugador.getEquipo() == null){
+            this.equipo = "Sin Equipo";
+        }else{
+            this.equipo = jugador.getEquipo().getNombre();
+        }
+       
     }
 }
