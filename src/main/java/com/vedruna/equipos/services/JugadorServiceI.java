@@ -11,7 +11,7 @@ public interface JugadorServiceI {
     PrimeJugadorDTO findByName(String name);
     void save(JugadorDTO jugador); //un jugador simple sin equipo Equipo = null
     void delete(int idJugador);
-    void inscribirEnEquipo(int idJugador, int idEquipo);
+    void inscribirEnEquipo(String jugador, String equipo);
     void eliminarDelEquipo(String nombre);
     String test();
 }

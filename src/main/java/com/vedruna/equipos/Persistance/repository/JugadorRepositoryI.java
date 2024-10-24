@@ -12,5 +12,4 @@ public interface JugadorRepositoryI extends JpaRepository<Jugador, Integer> {
     public Jugador findByNombre(String nombre);
     public Jugador findByIdjugador(int idjugador);
     public List<Jugador> findByEquipo_idEquipo(int idEquipo);
-    public void deleteByIdjugador(int idjugador);
 }

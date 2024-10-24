@@ -24,34 +24,56 @@ public class EquipoServiceImpl implements EquipoServiceI {
 
     @Override
     public List<PrimeEquipoDTO> findAll() {
+        try{
        List<Equipo> equipos = equipoRepo.findAll();
+
        List<PrimeEquipoDTO> primeEquipos = new ArrayList<>();
+       List<JugadorDTO> jugadoresDTO = new ArrayList<>();
+
        for (Equipo equipo : equipos) {
-            PrimeEquipoDTO equipoDTO = new PrimeEquipoDTO(equipo);
-            List<Jugador> jugadores = jugadorRepo.findByEquipo_idEquipo(equipoDTO.getId());
-            List<JugadorDTO> jugadoresDTO = jugadores.stream().map(j -> new JugadorDTO(j)).toList();
-                for (JugadorDTO jug : jugadoresDTO) {
-                    equipoDTO.getJugador().add(jug);
-                }
-            primeEquipos.add(equipoDTO);
+           primeEquipos.add(new PrimeEquipoDTO(equipo));
+           List<Jugador> jugadores = jugadorRepo.findByEquipo_idEquipo(equipo.getIdEquipo());
+           if(jugadores != null){
+            for (Jugador j : jugadores) {
+                jugadoresDTO.add(new JugadorDTO(j));
+            }}
+            else{
+                jugadoresDTO.add(new JugadorDTO());
+            }
+           primeEquipos.get(primeEquipos.size()-1).setJugador(jugadoresDTO);
+           jugadoresDTO = new ArrayList<>();
        }
        return primeEquipos;
-    }
-
-    @Override
-    public PrimeEquipoDTO findByName(String name) {
-        try{
-            PrimeEquipoDTO equipo = new PrimeEquipoDTO(equipoRepo.findByNombre(name));
-            List<Jugador> jugadores = jugadorRepo.findByEquipo_idEquipo(equipo.getId());
-            List<JugadorDTO> jugadoresDTO = jugadores.stream().map(j -> new JugadorDTO(j)).toList();
-            for (JugadorDTO jug : jugadoresDTO) {
-                equipo.getJugador().add(jug);
-            }
-            return equipo;
 
         }catch(Exception e){
             return null;
         }
+    }
+
+    @Override
+    public List<PrimeEquipoDTO> findByName(String name) {
+        try{
+            List<Equipo> equipos = equipoRepo.findByNombre(name);
+            List<PrimeEquipoDTO> primeEquipos = new ArrayList<>();
+            List<JugadorDTO> jugadoresDTO = new ArrayList<>();
+            for (Equipo equipo : equipos) {
+                primeEquipos.add(new PrimeEquipoDTO(equipo));
+                List<Jugador> jugadores = jugadorRepo.findByEquipo_idEquipo(equipo.getIdEquipo());
+                if(jugadores != null){
+                 for (Jugador j : jugadores) {
+                     jugadoresDTO.add(new JugadorDTO(j));
+                 }}
+                 else{
+                     jugadoresDTO.add(null);
+                 }
+                primeEquipos.get(primeEquipos.size()-1).setJugador(jugadoresDTO);
+                jugadoresDTO = new ArrayList<>();
+            }
+            return primeEquipos;
+     
+             }catch(Exception e){
+                 return null;
+             }
     }
 
     @Override
@@ -63,7 +85,7 @@ public class EquipoServiceImpl implements EquipoServiceI {
 
     @Override
     public void delete(int idEquipo) {
-        equipoRepo.deleteByIdEquipo(idEquipo);
+        equipoRepo.deleteById(idEquipo);
     }
 
     public String test(){

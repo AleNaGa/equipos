@@ -9,7 +9,6 @@ import com.vedruna.equipos.Persistance.model.Equipo;
 public interface EquipoRepositoryI extends JpaRepository<Equipo, Integer> {
 
     List<Equipo> findAll();
-    Equipo findByNombre(String nombre);
+    List<Equipo> findByNombre(String nombre);
     Equipo findByIdEquipo(int idEquipo);
-    void deleteByIdEquipo(int idEquipo);
 }

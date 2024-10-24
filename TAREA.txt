@@ -1,27 +1,27 @@
-        1. Consultar todos los equipos (Deben verse sus jugadores) PrimeEquipoDTO Find ALL
+1. Consultar todos los equipos (Deben verse sus jugadores) PrimeEquipoDTO Find ALL
 
-        2. Consultar un solo equipo (Deben verse sus jugadores) PrimeEquipoDTO find by Name/ID
+2. Consultar un solo equipo (Deben verse sus jugadores) PrimeEquipoDTO find by Name/ID
 
-                3. Consultar todos los jugadores (Debe verse solo el nombre del equipo, pero no el objeto equipo entero) JugadorDTO Find All / find by name
-
-
+3. Consultar todos los jugadores (Debe verse solo el nombre del equipo, pero no el objeto equipo entero) JugadorDTO Find All / find by name
 
 
 
 
 
-        4. Crear nuevo jugador
-
-        5. Crear nuevo equipo
-
-        6. Inscribir a un jugador en un equipo
-            Echarle del equipo
 
 
+4. Crear nuevo jugador
 
-        7. Borrar equipo (No deben borrarse sus jugadores)
+5. Crear nuevo equipo
 
-        8. Borrar jugador (No debe borrarse su equipo)
+6. Inscribir a un jugador en un equipo
+                                        Echarle del equipo
+
+
+
+7. Borrar equipo (No deben borrarse sus jugadores)
+
+8. Borrar jugador (No debe borrarse su equipo)
 
 
 

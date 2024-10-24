@@ -34,7 +34,7 @@ public class EquipoController {
     }
 
     @GetMapping("/nombre/{name}")
-    public PrimeEquipoDTO getEquipoByName(@PathVariable String name) {
+    public List<PrimeEquipoDTO> getEquipoByName(@PathVariable String name) {
         return equipoService.findByName(name);
     }
 
@@ -44,7 +44,7 @@ public class EquipoController {
         return "Equipo insertado correctamente";
     }
 
-    @DeleteMapping("delete/{idEquipo}")
+    @DeleteMapping("/delete/{idEquipo}")
     public String deleteEquipo(@PathVariable int idEquipo) {
         equipoService.delete(idEquipo);
         return "Equipo eliminado correctamente";

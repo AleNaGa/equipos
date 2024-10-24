@@ -8,7 +8,7 @@ import com.vedruna.equipos.DTO.PrimeEquipoDTO;
 public interface EquipoServiceI {
 
     List<PrimeEquipoDTO> findAll();
-    PrimeEquipoDTO findByName(String name);
+    List<PrimeEquipoDTO> findByName(String name);
 
     void save(EquipoDTO equipo);
     void delete(int idEquipo);

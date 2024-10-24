@@ -59,10 +59,10 @@ public class JugadorController {
         }
     }
 
-    @PutMapping("/inscribir/{idJugador}/{idEquipo}")
-    public String inscribirEnEquipo(@PathVariable int idJugador, @PathVariable int idEquipo) {
+    @PutMapping("/inscribir/{jugador}/{equipo}")
+    public String inscribirEnEquipo(@PathVariable String jugador, @PathVariable String equipo) {
         try{
-            jugadorService.inscribirEnEquipo(idJugador, idEquipo);
+            jugadorService.inscribirEnEquipo(jugador, equipo);
             return "Jugador inscrito en equipo correctamente";
         }catch(Exception e){
             return e.getMessage();

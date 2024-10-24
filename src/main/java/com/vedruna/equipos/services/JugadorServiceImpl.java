@@ -55,18 +55,18 @@ public class JugadorServiceImpl implements JugadorServiceI {
     @Override
     public void delete(int idJugador) {
        try{
-           jugadorRepo.deleteByIdjugador(idJugador);
+           jugadorRepo.deleteById(idJugador);
        }catch(Exception e){
            e.getMessage();
        }
     }
 
     @Override
-    public void inscribirEnEquipo(int idJugador, int idEquipo) {
+    public void inscribirEnEquipo(String jugadorName, String equipoName) {
         try{
-            Jugador jugador = jugadorRepo.findByIdjugador(idJugador);
-            Equipo equipo = equipoRepo.findByIdEquipo(idEquipo);
-            jugador.setEquipo(equipo);
+            Jugador jugador = jugadorRepo.findByNombre(jugadorName);
+            List<Equipo> equipo = equipoRepo.findByNombre(equipoName);
+            jugador.setEquipo(equipo.get(0));
             jugadorRepo.save(jugador);
         }catch(Exception e){
             e.getMessage();

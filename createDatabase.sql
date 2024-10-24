@@ -37,7 +37,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`jugadores` (
   CONSTRAINT `fk_jugadores_equipos`
     FOREIGN KEY (`equipos_idequipo`)
     REFERENCES `mydb`.`equipos` (`idequipo`)
-    ON DELETE Set null)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
