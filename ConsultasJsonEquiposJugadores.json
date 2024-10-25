@@ -1,0 +1,153 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Jugadores->Equipos",
+    "collectionId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+    "dateExported": "2024-10-25T09:31:22.773Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6ab47aa6-5912-42f5-95e5-be61adff5e93",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "findAllJugadores",
+            "url": "localhost:8080/api/v1/jugadores",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-24T11:13:26.275Z",
+            "modified": "2024-10-24T11:13:43.755Z",
+            "headers": []
+        },
+        {
+            "_id": "ac905576-6979-4bdf-b640-23c3a1acbe53",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "InsertJugador",
+            "url": "localhost:8080/api/v1/jugadores/insert",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-24T11:14:01.528Z",
+            "modified": "2024-10-25T09:26:59.839Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Salma\",\n  \"edad\": 21\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2279e0af-00aa-422b-b1ac-ac7e89cec63b",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "findByName",
+            "url": "localhost:8080/api/v1/jugadores/nombre/AitanaBonmati",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-10-24T11:15:30.919Z",
+            "modified": "2024-10-25T09:25:52.838Z",
+            "headers": []
+        },
+        {
+            "_id": "952fb158-2ab9-4f5f-8d96-7e579dee7e07",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "inscribirEnEquipo",
+            "url": "localhost:8080/api/v1/jugadores/inscribir/AitanaBonmati/MalagaFC",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-10-24T11:30:59.123Z",
+            "modified": "2024-10-25T09:26:30.569Z",
+            "headers": []
+        },
+        {
+            "_id": "e6a58067-0ca2-4d19-9a4d-2406999a11a4",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "InsertEquipo",
+            "url": "localhost:8080/api/v1/equipos/insert",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-10-24T11:31:12.862Z",
+            "modified": "2024-10-25T09:25:39.164Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"MalagaFC\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "384782dc-d2e2-42dd-ad07-cf827a4fc562",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "finAllEquipos",
+            "url": "localhost:8080/api/v1/equipos",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-10-24T11:34:05.921Z",
+            "modified": "2024-10-24T11:54:19.558Z",
+            "headers": []
+        },
+        {
+            "_id": "fc51bca3-2dfc-458b-8aa7-6c40c0f456a3",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "EcharJugador",
+            "url": "localhost:8080/api/v1/jugadores/echar/AitanaBonmati",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-10-25T09:26:10.609Z",
+            "modified": "2024-10-25T09:26:21.129Z",
+            "headers": []
+        },
+        {
+            "_id": "d85de513-3774-498e-9b37-03bbe476912d",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "DeleteJugador",
+            "url": "localhost:8080/api/v1/jugadores/delete/3",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-10-25T09:27:25.337Z",
+            "modified": "2024-10-25T09:28:46.428Z",
+            "headers": []
+        },
+        {
+            "_id": "6b4b99ef-744c-4755-8996-f1d732ee1be5",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "FindEquipoByName",
+            "url": "localhost:8080/api/v1/equipos/nombre/MalagaFC",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-10-25T09:28:25.496Z",
+            "modified": "2024-10-25T09:29:11.477Z",
+            "headers": []
+        },
+        {
+            "_id": "f9a66b97-e6ca-4d5f-8e9c-4e232f55b483",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "DeleteEquipo",
+            "url": "localhost:8080/api/v1/equipos/delete/1",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2024-10-25T09:29:41.274Z",
+            "modified": "2024-10-25T09:30:18.707Z",
+            "headers": []
+        },
+        {
+            "_id": "5d5576c5-1c6b-4875-8ea9-e54c4976fcd4",
+            "colId": "ffc64444-248b-4be9-b7ec-c9b78c193a8c",
+            "containerId": "",
+            "name": "BorrarJugador",
+            "url": "localhost:8080/api/v1/jugadores/delete/3",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2024-10-25T09:31:02.911Z",
+            "modified": "2024-10-25T09:31:13.738Z",
+            "headers": []
+        }
+    ],
+    "ref": "-qmb07qrFrk99sT_r4kbhAAKYKF3olO5U06E3ZHcipBDZZn5ozuhliHjaozj9btvWi-nfsGsRpNKdXRAGEkF7w"
+}
