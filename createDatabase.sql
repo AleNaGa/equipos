@@ -31,13 +31,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`jugadores` (
   `idjugador` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `edad` INT NOT NULL,
-  `equipos_idequipo` INT NOT NULL,
-  PRIMARY KEY (`idjugador`, `equipos_idequipo`),
+  `equipos_idequipo` INT,
+  PRIMARY KEY (`idjugador`),
   INDEX `fk_jugadores_equipos_idx` (`equipos_idequipo` ASC) VISIBLE,
   CONSTRAINT `fk_jugadores_equipos`
     FOREIGN KEY (`equipos_idequipo`)
     REFERENCES `mydb`.`equipos` (`idequipo`)
-    ON DELETE NO ACTION
+    ON DELETE Set null
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
